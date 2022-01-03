@@ -1,7 +1,7 @@
 import Profile from './components/Profile/Profile'
 import user from '../src/components/Profile/user.json'
-import Section from './components/Statistics/Section'
-
+import Statistics from './components/Statistics/Statistics'
+import stats from './components/Statistics/statistical-data.json';
 
 export default function App() {
     return (
@@ -13,36 +13,9 @@ export default function App() {
                 avatar={user.avatar}
                 stats={user.stats}
             />
-            <Section title="Upload stats"></Section>
-            <Section />
+            <Statistics title="Upload stats" stats={stats} />
+            
         </div>
     );
 }
 
-// export default function App() {
-//     return (
-//         <div>
-//             {users.map(user => (
-//             <Profile
-//             key={user.tag}
-//                 username={user.username}
-//                 tag={user.tag}
-//                 location={user.location}
-//                 avatar={user.avatar}
-//                 stats={user.stats}
-//                 />
-//             ))}
-//         </div>
-//     );
-// }
-
-// export default function App() {
-//   return (
-//     <div>
-//       <UserList items={user} />
-//       <Statistics data={stats} title={title} />
-//       <FriendList friends={friends} />
-//       <TransactionHistory items={transactions} />
-//     </div>
-//   );
-// }
